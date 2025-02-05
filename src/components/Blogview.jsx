@@ -3,6 +3,8 @@ import { useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { Trash2 } from 'lucide-react'
 import { useNavigate } from 'react-router-dom';
+import { Eye } from 'lucide-react';
+
 const Blogview = () => {
   const [blogs, setBlogs] = useState([]);
 
@@ -23,6 +25,14 @@ const Blogview = () => {
     setBlogs(storedBlogs);
   };
 
+  const incrementReadCount = (index) => {
+    const storedBlogs = JSON.parse(localStorage.getItem('blogs')) || [];
+    const blog = storedBlogs[index];
+    blog.readCount = (blog.readCount || 0) + 1;
+    storedBlogs[index] = blog;
+    localStorage.setItem('blogs', JSON.stringify(storedBlogs));
+    setBlogs(storedBlogs); 
+  };
 
   return (
     <div className="p-4 h-screen bg-gray-700">
@@ -32,7 +42,7 @@ const Blogview = () => {
           blogs.map((blog, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-transform duration-300 hover:scale-95"
+              className="bg-white p-6 rounded-lg space-x-4 shadow-lg hover:shadow-2xl transition-transform duration-300 hover:scale-95"
             >
               {blog.imageUrl && (
                 <img
@@ -43,15 +53,24 @@ const Blogview = () => {
               )}
               <h3 className="text-xl font-semibold mb-2 uppercase">{blog.title}</h3>
               <p className="text-gray-700  pb-3">{description(blog.content)}</p>
-              <Link to={`/readblog/${index}`} className="bg-black text-white rounded-lg p-2">Read More </Link>
               
+              <div className='flex '>
+                <div className='flex-grow'>
+              <Link to={`/readblog/${index}`} className="bg-black text-white rounded-lg p-2" onClick={() => incrementReadCount(index)}>Read More </Link>
+              </div>
+
+              <div className='gap-2 flex'>
+              <div className=" text-sm text-black flex"> <Eye />
+                {blog.readCount ? ` ${blog.readCount}` : "0"}
+              </div>
               <button
                 onClick={() => deleteBlog(index)}
-                className="text-white bg-black ml-4 "
+                className="text-black"
               >
               <Trash2 />  
               </button>
-            
+              </div>
+            </div>
             </div>
           ))
         ) : (
