@@ -1,12 +1,13 @@
 import React from 'react'
 import { useState,useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { Trash2 } from 'lucide-react'
 import { useNavigate } from 'react-router-dom';
 import { Eye } from 'lucide-react';
 
 const Blogview = () => {
   const [blogs, setBlogs] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
 
@@ -75,7 +76,13 @@ const Blogview = () => {
           ))
         ) : (
           <div className='flex w-screen  justify-center'>
-          <div className=' bg-gray-500 flex flex-col items-center text-4xl m-10 justify-center p-4 rounded-lg'>Dreaming, after all, is a form of planning.<div className='p-8'>Add your Blog now!!!</div></div>
+          <div className=' bg-gray-500 flex flex-col items-center text-4xl m-10 justify-center p-4 rounded-lg'>Dreaming, after all, is a form of planning.
+          <div className='p-8'>Add your Blog now!!!</div>
+          <button
+              onClick={() => navigate('/addblog')}
+              className="bg-black text-white p-2 rounded-lg mt-2 hover:bg-gray-800 transition"
+            > Add Blog
+            </button></div>
           </div>
         )}
       </div>

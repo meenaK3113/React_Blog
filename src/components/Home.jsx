@@ -5,7 +5,7 @@ const Home = () => {
     <div className='flex flex-col min-h-screen bg-gray-700'>
       <div>
         <div className='h-auto w-screen  relative'>
-            <p className='flex justify-start absolute italic font-bold text-6xl w-200 p-20 font-mono'>Reading is the art of conversing with the greatest minds across time.</p>
+            <p className='flex justify-start absolute italic font-bold text-6xl w-200 p-20 font-mono uppercase'>Reading is the art of conversing with the greatest minds across time.</p>
             <img src="https://th.bing.com/th/id/OIP.iPBdUoB-EYhsWAcuKKIjAQHaE8?rs=1&pid=ImgDetMain" className='w-screen h-170 object-center py-5 rounded-lg flex  '/>
         </div>
     </div>
