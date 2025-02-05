@@ -10,14 +10,15 @@ const Home = () => {
         </div>
     </div>
     <hr className='border-3'/>
-    <div className='flex bg-gray-500  text-3xl p-10'>
+
+    <div className='flex bg-gray-500 justify-center items-center py-5  text-3xl p-10 border-2 rounded-b-lg w-250 mx-100 my-5 transition-transform duration-300 hover:scale-110'>
       <img src="https://img.freepik.com/premium-vector/illustration-vector-graphic-cartoon-character-blogging_516790-1495.jpg" className='md:w-1/2 h-70 object-cover rounded-lg transition-transform duration-300 hover:scale-110'/>
       <Sparkles />
-      <p className='md:w-1/2 p-14 font-mono font-bold italic'>Don't focus on having a great blog. Focus on producing a blog that's great for your readers. </p>
+      <p className='md:flex-row p-14 font-mono font-bold italic'>Don't focus on having a great blog. Focus on producing a blog that's great for your readers. </p>
       <Sparkles />
     </div>
     <hr className='border-3'/>
-    <div className='flex bg-gray-500 text-3xl p-10 py-5 my-5'>
+    <div className='flex bg-gray-500 text-3xl p-10 py-5 my-5 border-2 rounded-b-lg w-250 mx-30 transition-transform duration-300 hover:scale-110'>
    
       <p className='md:w-1/2 m-12 font-mono font-bold italic'>Blogging is hard because of the grind required to stay interesting and relevant.</p>
      

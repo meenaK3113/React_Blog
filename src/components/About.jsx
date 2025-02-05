@@ -2,13 +2,13 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='flex flex-col items-center bg-gray-700'>
-        <div className='w-80 bg-gray-400 border-2 solid rounded-lg p-10 m-10 transition-transform duration-300 hover:scale-110'>
+    <div className='flex flex-col  bg-gray-700'>
+        <div className='w-80 bg-gray-400 border-2 solid rounded-lg p-10 mx-100 my-10 transition-transform duration-300 hover:scale-110'>
             <p className='text-3xl font-bold'>Bringing social movements to the cutting edge of digital culture</p>
             <p>We help organizations create online campaigns in an era of ever-changing media landscapes</p>
         </div>
         <hr className='border-3'/>
-        <div className='w-80 bg-gray-400 border-2 rounded-lg items-center text-center flex flex-col p-4 m-10 transition-transform duration-300 hover:scale-110'>
+        <div className='w-80 bg-gray-400 border-2 rounded-lg items-center text-center flex flex-col p-4 m-10 mx-200 transition-transform duration-300 hover:scale-110'>
             <p className='text-4xl font-bold flex text-center font-sans'>OUR MISSION</p>
             <p className='text-center w-3/4 md:w-2/3'>
             A mission-driven media company. We work with digital influencers and content creators to build powerful social media movements in support of the organizations, businesses, and campaigns working to advance equity and opportunity worldwide. 
