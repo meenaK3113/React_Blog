@@ -12,7 +12,7 @@ const Header = ({openModal}) => {
                 <li><Link to="/" >Home</Link></li>
                 <li><Link to="/about">About Us</Link></li>
                 <li><Link to="/blog">Blog</Link></li>
-                <button onClick={openModal} className='flex border-2 rounded-full px-6'>+ Add Blog</button>
+                <li><Link to="/addblog">Add Blog</Link></li>
             </ul>
         </div>
     </div>

@@ -9,6 +9,7 @@ import Home from './components/Home'
 import About from './components/About'
 import Blog from './components/Blog'
 import Blogview from './components/Blogview'
+import ReadBlog from './components/ReadBlog'
 
 
 
@@ -28,8 +29,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
-        <Route path="/blog" element={<Header/>}/>
+        <Route path="/blog" element={<Blogview/>}/>
         <Route path="/addblog" element={<Blog/>}/>
+        <Route path="/readblog/:id" element={<ReadBlog/>}/>
       </Routes>
       <Footer/>
       </BrowserRouter>
